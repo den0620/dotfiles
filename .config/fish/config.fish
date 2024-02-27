@@ -33,4 +33,13 @@ function fish_prompt
 		(set_color normal)
 end
 # meow
-
+function fish_right_prompt
+	set YELLOW_F      "$(set_color -b '000000' && set_color 'ffa04c')" # 'ffa04c' is like yellow but still a bit orange
+	set YELLOW_B_STAT "$(set_color -b 'ffa04c' && set_color   red   )"
+	set   OLED_B_STAT "$(set_color -b '000000' && set_color   red   )"
+	if test $status -ne "0"
+		printf '$s✘%s ' \
+			$OLED_B_STAT \
+			(set_color normal)
+	end
+end
