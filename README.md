@@ -2,7 +2,7 @@
 eeeh dotfiles?
 - fish shell (prompt)
 - hyprland (something here, something there)
-- kitty (pretty in-config bars)
+- kitty (pretty in-config tabs)
 - waybar (status bar)
 
 ![preview](preview2880x1800.png)
