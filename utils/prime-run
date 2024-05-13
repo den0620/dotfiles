@@ -1,0 +1,12 @@
+#!/bin/bash
+export GBM_BACKEND="nvidia-drm"
+export DXVK_FILTER_DEVICE_NAME="NVIDIA"
+export VKD3D_FILTER_DEVICE_NAME="NVIDIA"
+export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/10_nvidia.json"
+export VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/nvidia_icd.json"
+export VK_LOADER_DRIVERS_SELECT="*nvidia*"
+export __NV_PRIME_RENDER_OFFLOAD="1"
+export __VK_LAYER_NV_optimus="NVIDIA_only"
+export __GLX_VENDOR_LIBRARY_NAME="nvidia"
+unset MESA_VK_DEVICE_SELECT
+exec "$@"

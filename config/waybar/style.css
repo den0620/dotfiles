@@ -1,7 +1,9 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Kunst;
+    font-family: Ndot;
+	font-size: 16px;
+	font-weight: 700;
     min-height: 16px;
 }
 

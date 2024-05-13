@@ -78,12 +78,12 @@
         "format-source": "{volume}% ",
         "format-source-muted": "{volume}% ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol",
@@ -130,6 +130,6 @@
 
     "tray": {
         "icon-size": 16,
-        "spacing": 0
+        "spacing": 2
     },
 }
