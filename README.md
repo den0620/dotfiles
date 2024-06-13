@@ -16,6 +16,7 @@ no autoinstall script cause above
 (but dont worry there arent many)
 
 config/ contents go in .config/
+
 utils/ contents may go in /sbin/ or where you like it more
 
 ## note
