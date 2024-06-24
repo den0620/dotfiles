@@ -22,6 +22,8 @@ utils/ contents may go in /sbin/ or where you like it more
 
 systemd/ in /etc/systemd/system/
 
+(also enable service for it to work)
+
 ## note
 Thanks to the *lgaboury* for the good [waybar example](https://github.com/lgaboury/Sway-Waybar-Install-Script)
 
