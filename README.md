@@ -2,10 +2,11 @@
 eeeh dotfiles?
 - fish shell (prompt)
 - hyprland
+- hyprpaper
 - kitty (pretty in-config tabs)
 - waybar (status bar)
 - short offloads (prime-run & mesa-run)
-- charge limiter (80)
+- charge limiter (90)
 
 Keep in mind you'd better overview them yourself and amend smth
 
@@ -26,4 +27,8 @@ systemd/ in /etc/systemd/system/
 
 ## note
 Thanks to the *lgaboury* for the good [waybar example](https://github.com/lgaboury/Sway-Waybar-Install-Script)
+
+Wallpapers are from [here](https://www.reddit.com/r/girlsfrontline/comments/1cwye2d/through_the_lookingglass_wallpaper/)
+
+Fonts are from [here](https://nothing.by/)
 
