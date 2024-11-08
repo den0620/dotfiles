@@ -1,4 +1,4 @@
-#!/bin/bash
+#!env bash
 export DXVK_FILTER_DEVICE_NAME="Intel"
 export VKD3D_FILTER_DEVICE_NAME="Intel"
 export MESA_VK_DEVICE_SELECT="8086:a788"

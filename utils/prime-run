@@ -1,4 +1,4 @@
-#!/bin/bash
+#!env bash
 export GBM_BACKEND="nvidia-drm"
 export DXVK_FILTER_DEVICE_NAME="NVIDIA"
 export VKD3D_FILTER_DEVICE_NAME="NVIDIA"
