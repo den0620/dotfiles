@@ -14,11 +14,11 @@ end
 
 
 function fish_prompt
-	set ORANGE_F      "$(set_color -b '000000' && set_color 'b95628')" #some hex :3
+	set ORANGE_F      "$(printf '\033[0m'     && set_color 'b95628')" # some hex
 	set ORANGE_B_USER "$(set_color -b 'b95628' && set_color 'dddddd')" # 'b95628' is dark orange
 	set ORANGE_B_HOST "$(set_color -b 'b95628' && set_color 'dddddd')" # 'f35d17' is orange
 	set ORANGE_B_SPEC "$(set_color -b 'b95628' && set_color 'dddddd')" # 'dddddd' is gray
-	set ORANGE_B_PWD  "$(set_color -b 'b95628' && set_color 'dddddd')" # '000000' obviously oled black
+	set ORANGE_B_PWD  "$(set_color -b 'b95628' && set_color 'dddddd')" # '033[0m' is esc sequence for reset
 	printf '%s%s%s%s@%s%s%s:%s%s%s%s ' \
 		$ORANGE_F \
 		$ORANGE_B_USER \
@@ -34,12 +34,13 @@ function fish_prompt
 end
 # meow
 function fish_right_prompt
-	set YELLOW_F      "$(set_color -b '000000' && set_color 'ffa04c')" # 'ffa04c' is like yellow but still a bit orange
+	set YELLOW_F      "$(printf '\033[0m'      && set_color 'ffa04c')" # 'ffa04c' is like yellow but still a bit orange
 	set YELLOW_B_STAT "$(set_color -b 'ffa04c' && set_color   red   )"
-	set   OLED_B_STAT "$(set_color -b '000000' && set_color   red   )"
+	set   OLED_B_STAT "$(printf '\033[0m'      && set_color   red   )"
 	if test $status -ne "0"
 		printf '$s✘%s ' \
 			$OLED_B_STAT \
 			(set_color normal)
 	end
 end
+
