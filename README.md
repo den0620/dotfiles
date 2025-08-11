@@ -1,18 +1,33 @@
 # dotfiles
+
 [x] [fish](https://fishshell.com/) (shell/prompt)
+
 [x] [niri](https://github.com/YaLTeR/niri) (compositor)
+
 [x] [swaybg](https://github.com/swaywm/swaybg) (background image)
+
 [ ] [swaylock](https://github.com/swaywm/swaylock) (screen lock)
+
 [ ] [swayosd](https://github.com/ErikReider/SwayOSD) (actions display)
+
 [x] [waybar](https://github.com/Alexays/Waybar) (status bar)
+
 [x] [kitty](https://sw.kovidgoyal.net/kitty/) (pretty in-config tabs)
+
 [ ] [nemo](https://wiki.archlinux.org/title/Nemo) (file manager)
+
 [ ] [dunst](https://github.com/dunst-project/dunst) (notifications)
+
 [ ] [albert](https://albertlauncher.github.io/) (spotlight-like)
+
 [ ] [polkit-gnome](https://wiki.archlinux.org/title/Polkit) (gtk polkit)
+
 [x] [wtype](https://github.com/atx/wtype) (keybinds)
+
 [x] [short offloads](https://wiki.archlinux.org/title/PRIME) (prime-run & mesa-run)
+
 [x] charge limiter (90)
+
 [x] start qemu network
 
 Checkmarks meaning presence of config
