@@ -1,2 +1,2 @@
-#!env sh
+#!/bin/env sh
 virsh net-start default
