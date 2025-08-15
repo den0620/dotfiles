@@ -53,7 +53,7 @@ config/ contents go in .config/
 
 utils/ contents may go in /sbin/ or where you like it more
 
-systemd/ in /etc/systemd/system/
+systemd/ in /etc/systemd/system/ or ~/.config/systemd/user/ (swaybg)
 
 (also enable service for it to work)
 
@@ -76,6 +76,8 @@ I may forget something
 ## swaybg
 
 Place you desired background as `~/.config/niri/background.png`
+
+Move swaybg.service to `~/.config/systemd/user/` and `systemctl --user enable swaybg.service --now`
 
 ## waybar
 

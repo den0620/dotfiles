@@ -53,7 +53,7 @@ input {
 }
 
 overview {
-    backdrop-color "#000"; // Sets black backdrop globally
+    backdrop-color "#000"; // Sets a dark grey backdrop globally
 }
 // Put swaybg inside the overview backdrop.
 layer-rule {
@@ -588,7 +588,7 @@ binds {
 spawn-at-startup "dunst"              // Notifications
 spawn-at-startup "xwayland-satellite" // XWayland
 //spawn-at-startup "swww-daemon"      // Wallpaper
-spawn-at-startup "swaybg --image '/home/ninefid/personal/anime_girl_plus_rockets.png'"
+//spawn-at-startup "swaybg --image '~/.config/niri/background.png'" // starts from user systemd service
 spawn-at-startup "waybar"             // Top bar
 spawn-at-startup "albert"             // Spotlight
 spawn-at-startup "swayosd-server"     // OSD
