@@ -3,22 +3,28 @@
     "position": "top",
     "margin": "5 5 0 5",
 	"padding": "0 0 0 0",
-    "modules-left": ["hyprland/workspaces", "hyprland/language", "keyboard-state", "pulseaudio"],
+    //"modules-left": ["sway/workspaces", "sway/language", "keyboard-state", "pulseaudio", "custom/nvstat"],
+    //"modules-left": ["hyprland/workspaces", "hyprland/language", "keyboard-state", "pulseaudio", "custom/nvstat"],
+    "modules-left": ["niri/workspaces", "niri/language", "keyboard-state", "pulseaudio"],
     "modules-center": ["clock", "custom/weather"],
-    "modules-right": ["custom/pacman", "custom/power", "custom/ram", "temperature", "backlight", "battery", "tray"],
+    "modules-right": ["custom/ram", "custom/power", "custom/nvstat", "backlight", "battery", "tray"],
 
 
-    "hyprland/workspaces": {
+    //"sway/workspaces": {
+    //"hyprland/workspaces": {
+    "niri/workspaces": {
         "disable-scroll": true,
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-        },
+        //"persistent-workspaces": {
+        //    "1": [],
+        //    "2": [],
+        //    "3": [],
+        //    "4": [],
+        //},
     },
 
-    "hyprland/language": {
+    //"sway/language": {
+    //"hyprland/language": {
+    "niri/language": {
         "format": "{} 󰘳",
 		"min-length": 5,
 		"tooltip": false
@@ -34,6 +40,13 @@
         },
     },
 
+    "custom/nvstat": {
+        "format": "{} ",
+        "interval": 3,               // every 3 sec
+        "exec": "cat /sys/bus/pci/devices/0000:01:00.0/power_state | head -c 2",
+        "tooltip": false,
+    },
+
     "custom/pacman": {
         "format": "{} ",
         "interval": 3600,                     			// every hour
@@ -46,7 +59,8 @@
 
 	"custom/power": {
         "format": "{} 󱐋",
-		"exec": "$HOME/.config/waybar/scripts/check_power.sh",
+		//"exec": "$HOME/.config/waybar/scripts/check_power.sh",
+        "exec": "awk '{printf \"%.1f\", $1/1000000}' /sys/class/power_supply/BAT0/power_now",
         "interval": 1,
         "signal": 9,
         "tooltip": false,
@@ -58,7 +72,8 @@
 
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%a, %d %b, %I:%M %p}"
+        //"format": "{:%a, %d %b, %I:%M %p}"
+        "format": "{:%a, %d %b, %H:%M}"
     },
 
     "custom/weather": {
@@ -95,6 +110,7 @@
         "interval": 3,
         "exec": "free -h | awk '/Mem:/{printf $3}'",
         "tooltip": false,
+        "on-click": "control",
     },
 
     "temperature": {

@@ -77,9 +77,9 @@ window#waybar.hidden {
 }
 
 #custom-power {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
+    margin-right: 0px;
+    padding-left: 16px;
+    border-radius: 10px 0px 0px 10px;
     transition: none;
     color: #ffffff;
     background: #383c4a;
@@ -111,6 +111,16 @@ window#waybar.hidden {
     background: #383c4a;
 }
 
+#custom-nvstat {
+    margin-right: 0px;
+    padding-left: 16px;
+    padding-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
 #pulseaudio {
     margin-right: 8px;
     padding-left: 16px;
@@ -137,10 +147,10 @@ window#waybar.hidden {
 }
 
 #temperature {
-    margin-right: 8px;
+    margin-right: 0px;
     padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
+    padding-right: 0px;
+    border-radius: 0px 0px 0px 0px;
     transition: none;
     color: #ffffff;
     background: #383c4a;
@@ -151,10 +161,10 @@ window#waybar.hidden {
 }
 
 #backlight {
-    margin-right: 8px;
+    margin-right: 0px;
     padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
+    padding-right: 8px;
+    border-radius: 0px 0px 0px 0px;
     transition: none;
     color: #ffffff;
     background: #383c4a;
@@ -162,9 +172,9 @@ window#waybar.hidden {
 
 #battery {
     margin-right: 8px;
-    padding-left: 16px;
+    padding-left: 8px;
     padding-right: 16px;
-    border-radius: 10px;
+    border-radius: 0px 10px 10px 0px;
     transition: none;
     color: #ffffff;
     background: #383c4a;

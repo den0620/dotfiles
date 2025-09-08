@@ -18,9 +18,13 @@
 
 [ ] [dunst](https://github.com/dunst-project/dunst) (notifications)
 
-[ ] [albert](https://albertlauncher.github.io/) (spotlight-like)
+[x] [fuzzel](https://codeberg.org/dnkl/fuzzel/) (app launcher)
 
 [ ] [polkit-gnome](https://wiki.archlinux.org/title/Polkit) (gtk polkit)
+
+[ ] [gnome-keyring](https://wiki.archlinux.org/title/GNOME/Keyring) (widely supported keyring)
+
+[ ] [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) (sound control)
 
 [x] [wtype](https://github.com/atx/wtype) (keybinds)
 
@@ -29,6 +33,8 @@
 [x] charge limiter (90)
 
 [x] start qemu network
+
+[x] `mesa-run` and `prime-run` to either feed procces i915 iGPU or nvidia dGPU
 
 Checkmarks meaning presence of config
 
@@ -40,13 +46,11 @@ no autoinstall script
 (but there arent many)
 
 ```
-yay -S fish niri swaybg swaylock swayosd waybar kitty nemo nemo-fileroller albert polkit-gnome wtype xwayland-satellite xdg-desktop-portal-wlr
+pacman -S fish niri swaybg swaylock swayosd waybar kitty nemo nemo-fileroller fuzzel polkit-gnome pavucontrol wtype xwayland-satellite xdg-desktop-portal-wlr
 ```
 
-(albert is the only one from [AUR](https://aur.archlinux.org/packages/albert))
-
 ```
-sudo systemctl enable swayosd-libinput-backend.service --now
+systemctl enable swayosd-libinput-backend.service --now
 ```
 
 config/ contents go in .config/
@@ -69,7 +73,7 @@ I may forget something
 
 `Super + T` spawns `Telegram`
 
-`Super + R` spawns `albert`
+`Super + R` spawns `fuzzel`
 
 `Super + Alt + L` locks session (`swaylock`)
 
@@ -77,14 +81,16 @@ I may forget something
 
 Place you desired background as `~/.config/niri/background.png`
 
-Move swaybg.service to `~/.config/systemd/user/` and `systemctl --user enable swaybg.service --now`
+Move swaybg.service to `~/.config/systemd/user/` and `systemctl --user enable swaybg.service --now && systemctl --user add-wants niri.service swaybg.service`
 
 ## waybar
 
-There are niri/workspaces, niri/keyboard, caps (though i think it fell off), date, wttr.in, ram, power, dgpu state, backlight, charge, tray
+There are niri/workspaces, niri/keyboard, caps (though it fell off and i haven't felt like fixing it), sound, date, wttr.in, ram, power, dgpu state, backlight, charge, tray
 
 ## note
 Thanks to the *lgaboury* for the good [waybar example](https://github.com/lgaboury/Sway-Waybar-Install-Script)
 
 Fonts are from [Nothing](https://nothing.by/)
+
+Background is "Grozny" from [Stanley Donwood](https://www.slowlydownward.com/selected-works/) edited to fit 2880x1800
 
