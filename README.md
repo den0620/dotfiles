@@ -1,40 +1,40 @@
 # dotfiles
 
-[x] [fish](https://fishshell.com/) (shell/prompt)
+- [x] [fish](https://fishshell.com/) (shell/prompt)
 
-[x] [niri](https://github.com/YaLTeR/niri) (compositor)
+- [x] [niri](https://github.com/YaLTeR/niri) (compositor)
 
-[x] [swaybg](https://github.com/swaywm/swaybg) (background image)
+- [x] [swaybg](https://github.com/swaywm/swaybg) (background image)
 
-[ ] [swaylock](https://github.com/swaywm/swaylock) (screen lock)
+- [ ] [swaylock](https://github.com/swaywm/swaylock) (screen lock)
 
-[ ] [swayosd](https://github.com/ErikReider/SwayOSD) (actions display)
+- [ ] [swayosd](https://github.com/ErikReider/SwayOSD) (actions display)
 
-[x] [waybar](https://github.com/Alexays/Waybar) (status bar)
+- [x] [waybar](https://github.com/Alexays/Waybar) (status bar)
 
-[x] [kitty](https://sw.kovidgoyal.net/kitty/) (pretty in-config tabs)
+- [x] [kitty](https://sw.kovidgoyal.net/kitty/) (pretty in-config tabs)
 
-[ ] [nemo](https://wiki.archlinux.org/title/Nemo) (file manager)
+- [ ] [nemo](https://wiki.archlinux.org/title/Nemo) (file manager)
 
-[ ] [dunst](https://github.com/dunst-project/dunst) (notifications)
+- [ ] [dunst](https://github.com/dunst-project/dunst) (notifications)
 
-[x] [fuzzel](https://codeberg.org/dnkl/fuzzel/) (app launcher)
+- [x] [fuzzel](https://codeberg.org/dnkl/fuzzel/) (app launcher)
 
-[ ] [polkit-gnome](https://wiki.archlinux.org/title/Polkit) (gtk polkit)
+- [ ] [polkit-gnome](https://wiki.archlinux.org/title/Polkit) (gtk polkit)
 
-[ ] [gnome-keyring](https://wiki.archlinux.org/title/GNOME/Keyring) (widely supported keyring)
+- [ ] [gnome-keyring](https://wiki.archlinux.org/title/GNOME/Keyring) (widely supported keyring)
 
-[ ] [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) (sound control)
+- [ ] [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) (sound control)
 
-[x] [wtype](https://github.com/atx/wtype) (keybinds)
+- [x] [wtype](https://github.com/atx/wtype) (keybinds)
 
-[x] [short offloads](https://wiki.archlinux.org/title/PRIME) (prime-run & mesa-run)
+- [x] [short offloads](https://wiki.archlinux.org/title/PRIME) (prime-run & mesa-run)
 
-[x] charge limiter (90)
+- [x] charge limiter (90)
 
-[x] start qemu network
+- [x] start qemu network
 
-[x] `mesa-run` and `prime-run` to either feed procces i915 iGPU or nvidia dGPU
+- [x] `mesa-run` and `prime-run` to either feed procces i915 iGPU or nvidia dGPU
 
 Checkmarks meaning presence of config
 
