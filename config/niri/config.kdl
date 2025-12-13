@@ -8,8 +8,12 @@ input {
     keyboard {
         xkb {
             // For more information, see xkeyboard-config(7).
+            model "asus_laptop"
             layout "us,ru"
-            options "grp:win_space_toggle,grp:alt_shift_toggle,compose:ralt"
+            options "grp:win_space_toggle,
+                     grp:alt_shift_toggle,
+                     compose:ralt,
+                     caps:shiftlock"
         }
     }
     touchpad {
@@ -28,8 +32,8 @@ input {
     mouse {
         // off
         // natural-scroll
-        accel-speed 0.2  // doesnt work with my G502 Hero
-        accel-profile "flat"
+        accel-speed -0.5
+        //accel-profile "flat"
         // scroll-method "no-scroll"
     }
 
@@ -61,6 +65,14 @@ output "eDP-1" {
     //mode "2880x900@90"  // sadly doesnt work tho hyprland could. this is hilarious to play cs2
     scale 2.0
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+    //mode "2880x1800@60.001"
+    
+    transform "normal"
+    position x=1440 y=0
+}
+output "DP-1" {
+    scale 1.0
+    mode "1920x1080@60"
     transform "normal"
     position x=1440 y=0
 }
@@ -183,6 +195,7 @@ binds {
     Mod+F { spawn "firefox"; }
     Mod+T { spawn "Telegram"; }
     Mod+R { spawn "fuzzel"; }
+    Mod+E { spawn "iwmenu" "--launcher" "fuzzel"; }
     Mod+Alt+L { spawn "swaylock"; }
 
     // Volume keys mappings for PipeWire & WirePlumber.
@@ -203,7 +216,8 @@ binds {
 
     // silly
     XF86Launch1           { spawn "wtype" "🦅"; }
-    XF86PowerOff          { spawn "wtype" "💀"; }
+    //XF86PowerOff          { spawn "wtype" "💀"; }
+    XF86PowerOff          { spawn "wtype" "HD3850 - самая мощная AGP видеокарта"; }
 
     Mod+C { close-window; }
 
@@ -314,19 +328,18 @@ binds {
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Mod+Shift+E { quit; }
+    Mod+Alt+E { quit; }
     Ctrl+Alt+Delete { quit; }
 
-    Mod+Shift+P { power-off-monitors; }
+    Mod+Alt+P { power-off-monitors; }
 }
 
 
 spawn-at-startup "dunst"              // Notifications
 spawn-at-startup "xwayland-satellite" // XWayland
-//spawn-at-startup "swww-daemon"      // Wallpaper
 //spawn-at-startup "swaybg --image '~/.config/niri/background.png'" // starts from user systemd service
 spawn-at-startup "waybar"             // Top bar
-spawn-at-startup "albert"             // Spotlight
+//spawn-at-startup "albert"           // Spotlight
 spawn-at-startup "swayosd-server"     // OSD
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "swayidle" "-w" "timeout" "601" "niri msg action power-off-monitors" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f"
