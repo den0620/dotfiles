@@ -150,7 +150,7 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 // You can also set this to null to disable saving screenshots to disk.
-// screenshot-path null
+// screenshot-path nul
 
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
 animations {
@@ -202,6 +202,7 @@ binds {
     Mod+C { close-window; }
     Print { screenshot; }
     Shift+Print { screenshot-screen; }
+    Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
     Mod+Alt+E { quit; }
@@ -300,10 +301,11 @@ binds {
 
     //Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+Shift+F { fullscreen-window; }
+    //Mod+Shift+F { fullscreen-window; }
+    Mod+Return { fullscreen-window; }
 
     // Maximize width
-    Mod+Ctrl+F { expand-column-to-available-width; }
+    Mod+Shift+R { expand-column-to-available-width; }
     // Change width by step
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
