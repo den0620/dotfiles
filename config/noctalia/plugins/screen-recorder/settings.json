@@ -1,0 +1,14 @@
+{
+  "directory": "",
+  "filenamePattern": "yyyy-MM-dd_HH:mm:ss",
+  "frameRate": "30",
+  "audioCodec": "aac",
+  "videoCodec": "hevc",
+  "quality": "high",
+  "colorRange": "limited",
+  "showCursor": true,
+  "copyToClipboard": false,
+  "audioSource": "default_output",
+  "videoSource": "portal",
+  "resolution": "original"
+}

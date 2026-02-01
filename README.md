@@ -4,21 +4,11 @@
 
 - [x] [niri](https://github.com/YaLTeR/niri) (compositor)
 
-- [x] [swaybg](https://github.com/swaywm/swaybg) (background image)
-
-- [ ] [swaylock](https://github.com/swaywm/swaylock) (screen lock)
-
-- [ ] [swayosd](https://github.com/ErikReider/SwayOSD) (actions display)
-
-- [x] [waybar](https://github.com/Alexays/Waybar) (status bar)
+- [x] [noctalia-shell](https://github.com/noctalia-dev/noctalia-shell) (shell)
 
 - [x] [kitty](https://sw.kovidgoyal.net/kitty/) (pretty in-config tabs)
 
 - [ ] [nemo](https://wiki.archlinux.org/title/Nemo) (file manager)
-
-- [ ] [dunst](https://github.com/dunst-project/dunst) (notifications)
-
-- [x] [fuzzel](https://codeberg.org/dnkl/fuzzel/) (app launcher)
 
 - [ ] [polkit-gnome](https://wiki.archlinux.org/title/Polkit) (gtk polkit)
 
@@ -26,19 +16,17 @@
 
 - [ ] [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) (sound control)
 
+- [ ] [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/) (screen recorder)
+
 - [x] [wtype](https://github.com/atx/wtype) (keybinds)
 
-- [x] [short offloads](https://wiki.archlinux.org/title/PRIME) (prime-run & mesa-run)
-
-- [x] charge limiter (90)
+- [x] charge limiter (80)
 
 - [x] start qemu network
 
-- [x] `mesa-run` and `prime-run` to either feed procces i915 iGPU or nvidia dGPU
-
 Checkmarks meaning presence of config
 
-![preview](preview2880x1800.png)
+![preview](preview2880x1800.webp)
 
 ## installation
 no autoinstall script
@@ -46,20 +34,12 @@ no autoinstall script
 (but there arent many)
 
 ```
-pacman -S fish niri swaybg swaylock swayosd waybar kitty nemo nemo-fileroller fuzzel polkit-gnome pavucontrol wtype xwayland-satellite xdg-desktop-portal-wlr
-```
-
-```
-systemctl enable swayosd-libinput-backend.service --now
+pacman -S fish niri noctalia-shell gpu-screen-recorder cliphist kitty nemo nemo-fileroller fuzzel polkit-gnome pavucontrol wtype xwayland-satellite xdg-desktop-portal-wlr
 ```
 
 config/ contents go in .config/
 
 utils/ contents may go in /sbin/ or where you like it more
-
-systemd/ in /etc/systemd/system/ or ~/.config/systemd/user/ (swaybg)
-
-(also enable service for it to work)
 
 I may forget something
 
@@ -73,24 +53,11 @@ I may forget something
 
 `Super + T` spawns `Telegram`
 
-`Super + R` spawns `fuzzel`
+`Super + R` spawns launcher (noctalia)
 
-`Super + Alt + L` locks session (`swaylock`)
+`Super + Alt + L` locks session (noctalia)
 
-## swaybg
-
-Place you desired background as `~/.config/niri/background.png`
-
-Move swaybg.service to `~/.config/systemd/user/` and `systemctl --user enable swaybg.service --now && systemctl --user add-wants niri.service swaybg.service`
-
-## waybar
-
-There are niri/workspaces, niri/keyboard, caps (though it fell off and i haven't felt like fixing it), sound, date, wttr.in, ram, power, dgpu state, backlight, charge, tray
+`Super + Alt + P` powers off monitors (niri)
 
 ## note
-Thanks to the *lgaboury* for the good [waybar example](https://github.com/lgaboury/Sway-Waybar-Install-Script)
-
-Fonts are from [Nothing](https://nothing.by/)
-
-Background is "Grozny" from [Stanley Donwood](https://www.slowlydownward.com/selected-works/) edited to fit 2880x1800
 
